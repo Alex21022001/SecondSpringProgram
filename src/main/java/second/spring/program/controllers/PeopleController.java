@@ -1,6 +1,6 @@
 package second.spring.program.controllers;
 
-import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +8,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import second.spring.program.dao.PersonDAO;
 import second.spring.program.models.Person;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/people")
@@ -26,14 +28,13 @@ public class PeopleController {
     }
 
     @GetMapping("/{id}")
-    public String show(@PathVariable int id, Model model) {
+    public String show(@PathVariable("id") int id, Model model) {
         model.addAttribute("person", personDAO.show(id));
         return "people/show";
     }
 
     @GetMapping("/new")
-    public String newPerson(Model model) {
-        model.addAttribute("person", new Person());
+    public String newPerson(@ModelAttribute("person") Person person) {
         return "people/new";
     }
 
@@ -48,10 +49,11 @@ public class PeopleController {
     }
 
     @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
+    public String edit(Model model, @PathVariable("id") int id) {
         model.addAttribute("person", personDAO.show(id));
         return "people/edit";
     }
+
     @PatchMapping("/{id}")
     public String update(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult,
                          @PathVariable("id") int id) {
@@ -62,14 +64,8 @@ public class PeopleController {
         return "redirect:/people";
     }
 
-    @PostMapping("/{id}")
-    public String cut(@PathVariable("id") int id) {
-        personDAO.cutEggs(id);
-        return "redirect:/people";
-    }
-
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable int id) {
+    public String delete(@PathVariable("id") int id) {
         personDAO.delete(id);
         return "redirect:/people";
     }
