@@ -1,0 +1,200 @@
+body {
+    /*background: #1b2631;*/
+    background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+.double-border-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-family: 'Montserrat', sans-serif;
+    transition: .4s;
+}
+.double-border-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: .4s;
+}
+.double-border-button:hover:after {
+    border-color: #f1c40f;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+}
+.closing-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    box-shadow: 0 0 0 2px white;
+    padding: 20px 0;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.closing-button span {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 5;
+}
+.closing-button:before, .closing-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.closing-button:before {
+    transform: translateX(-100%);
+    background: white;
+    transition: transform .3s cubic-bezier(.55, .055, .675, .19);
+}
+.closing-button:after {
+    background: #413ad5;
+    transform: translateX(100%);
+    transition: transform .3s cubic-bezier(.16, .73, .58, .62) .3s;
+}
+.closing-button:hover:before, .closing-button:hover:after {
+    transform: translateX(0);
+}
+
+
+
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+.gradient-button:hover {
+    background-position: right center;
+}
+
+
+.floating-button {
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+.floating-button:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+
+.atuin-btn {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;
+}
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+    color: #FFF;
+}
+.atuin-btn:before,
+.atuin-btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 100%;
+    background-color: #1C4B73;
+    z-index: -1;
+}
+.atuin-btn:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+}
+.atuin-btn:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+}
+.atuin-btn:hover:before,
+.atuin-btn:active:before,
+.atuin-btn:focus:before {
+    animation: from-left 0.5s both;
+}
+.atuin-btn:hover:after,
+.atuin-btn:active:after,
+.atuin-btn:focus:after {
+    animation: from-right 0.5s both;
+}
+@keyframes from-right {
+    0% {
+        right: -20px;
+    }
+    50% {
+        right: 50%;
+        width: 20px;
+    }
+    100% {
+        right: 50%;
+        width: 100%;
+    }
+}
+@keyframes from-left {
+    0% {
+        left: -20px;
+    }
+    50% {
+        left: 50%;
+        width: 20px;
+    }
+    100% {
+        left: 50%;
+        width: 100%;
+    }
+}
