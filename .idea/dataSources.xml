@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="spring_db@localhost" uuid="884bd834-b74c-4dbc-ac14-38636c50700a">
+    <data-source source="LOCAL" name="spring_db@localhost" uuid="925eb90b-21bd-4281-a1e1-b9f9d09f4c70">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

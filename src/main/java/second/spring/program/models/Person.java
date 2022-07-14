@@ -1,19 +1,31 @@
 package second.spring.program.models;
 
 
+import javax.persistence.*;
 import javax.validation.constraints.*;
 
+@Entity
+@Table(name = "Person")
 public class Person {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+
+    @Column(name = "name")
     @NotEmpty(message = "Name should not be empty")
     @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
     private String name;
 
+
+    @Column(name = "age")
     @Min(value = 0, message = "Age should be greater than 0")
     @Max(value = 100, message = "Age should be fewer than 100")
     private int age;
 
+
+    @Column(name = "email")
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
     private String email;
@@ -26,7 +38,7 @@ public class Person {
         this.address = address;
     }
 
-    @Pattern(regexp = "[A-Z]\\w+, [A-Z]\\w+, \\d{5}",message = "You should enter a correct location as an example \"Ukraine, Kharkiv, 61000\"")
+    @Pattern(regexp = "[A-Z]\\w+, [A-Z]\\w+, \\d{5}", message = "You should enter a correct location as an example \"Ukraine, Kharkiv, 61000\"")
     @NotEmpty(message = "Address should not be empty")
     private String address;
 
