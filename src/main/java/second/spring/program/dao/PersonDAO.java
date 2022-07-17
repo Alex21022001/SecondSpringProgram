@@ -34,9 +34,11 @@ public class PersonDAO {
         return people;
     }
 
+    @Transactional
     public Optional<Person> show(String email) {
-        return jdbcTemplate.query("SELECT * FROM Person WHERE email=?", new Object[]{email}, new BeanPropertyRowMapper<>(Person.class))
-                .stream().findAny();
+        Session session = sessionFactory.getCurrentSession();
+        List<Person> people = session.createQuery("FROM Person WHERE email=:email").setParameter("email", email).getResultList();
+        return people.stream().findAny();
     }
 
     @Transactional(readOnly = true)
@@ -47,18 +49,68 @@ public class PersonDAO {
 
     @Transactional()
     public void save(Person person) {
-        jdbcTemplate.update("INSERT INTO Person(name,age,email,address) VALUES (?,?,?,?)"
-                , person.getName(), person.getAge(), person.getEmail(), person.getAddress());
+        Session session = sessionFactory.getCurrentSession();
+        session.save(person);
     }
 
+    @Transactional
     public void update(int id, Person updatedPerson) {
-        jdbcTemplate.update("UPDATE Person SET name = ?,age =?,email =?,address = ? WHERE id =?",
-                updatedPerson.getName(), updatedPerson.getAge(), updatedPerson.getEmail(), updatedPerson.getAddress(), id);
+        Session session = sessionFactory.getCurrentSession();
+        Person person = session.get(Person.class, id);
+        person.setName(updatedPerson.getName());
+        person.setAge(updatedPerson.getAge());
+        person.setEmail(updatedPerson.getEmail());
+        person.setAddress(updatedPerson.getAddress());
     }
 
+    @Transactional
     public void delete(int id) {
-        jdbcTemplate.update("DELETE FROM Person WHERE id=?", id);
+        Session session = sessionFactory.getCurrentSession();
+        session.remove(session.get(Person.class, id));
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public void testMultipleUpdate() {
