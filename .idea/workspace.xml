@@ -10,17 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2633cc61-3fef-4908-a74a-685d5484e6e8" name="Changes" comment="add Hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/repositories/ItemsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/repositories/PeopleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/ItemsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/dao/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +29,7 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="com.haulmont.jpb.JpaRepository" />
       </list>
     </option>
   </component>
@@ -202,6 +198,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.adminPage.html" />
+        <item itemvalue="JavaScript Debug.adminPage.html" />
+        <item itemvalue="JavaScript Debug.adminPage.html" />
+        <item itemvalue="JavaScript Debug.adminPage.html" />
       </list>
     </recent_temporary>
   </component>
@@ -287,16 +286,5 @@
     <MESSAGE value="Add DB" />
     <MESSAGE value="add Hibernate" />
     <option name="LAST_COMMIT_MESSAGE" value="add Hibernate" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
