@@ -6,15 +6,16 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 import second.spring.program.dao.PersonDAO;
 import second.spring.program.models.Person;
+import second.spring.program.services.PeopleService;
 
 @Component
 public class PersonValidator implements Validator {
 
-    private final PersonDAO personDAO;
+    private final PeopleService peopleService;
 
     @Autowired
-    public PersonValidator(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    public PersonValidator( PeopleService peopleService) {
+        this.peopleService = peopleService;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class PersonValidator implements Validator {
     public void validate(Object target, Errors errors) {
         Person person = (Person) target;
 
-        if (personDAO.show(person.getEmail()).isPresent())
+        if (peopleService.findByEmail(person.getEmail()).isPresent())
             errors.rejectValue("email","","This email is already taken");
 
     }

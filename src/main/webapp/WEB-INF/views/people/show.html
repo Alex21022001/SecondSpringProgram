@@ -10,6 +10,9 @@
 <p th:text="${person.getId()}">VALUE</p>
 <p th:text="${person.getAddress()}"></p>
 <br/>
+<div th:each="item: ${items}">
+    <p th:text="${item.getItemName()}"></p>
+</div>
 
 <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
 

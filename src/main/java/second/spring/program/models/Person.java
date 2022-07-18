@@ -3,6 +3,8 @@ package second.spring.program.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Person")
@@ -29,6 +31,11 @@ public class Person {
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
     private String email;
+
+
+
+    @OneToMany(mappedBy = "owner")
+    private List<Item> item;
 
     public String getAddress() {
         return address;
