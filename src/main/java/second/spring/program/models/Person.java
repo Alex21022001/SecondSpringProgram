@@ -1,6 +1,8 @@
 package second.spring.program.models;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.Date;
@@ -32,7 +34,39 @@ public class Person {
     @Email(message = "Email should be valid")
     private String email;
 
+    @Column(name = "date_of_birth")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date dateOfBirth;
 
+
+    @Column(name = "created_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAT;
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Date getCreatedAT() {
+        return createdAT;
+    }
+
+    public void setCreatedAT(Date createdAT) {
+        this.createdAT = createdAT;
+    }
+
+    public List<Item> getItem() {
+        return item;
+    }
+
+    public void setItem(List<Item> item) {
+        this.item = item;
+    }
 
     @OneToMany(mappedBy = "owner")
     private List<Item> item;
@@ -53,12 +87,13 @@ public class Person {
 
     }
 
-    public Person(int id, String name, int age, String email, String address) {
+    public Person(int id, String name, int age, String email, String address,Date dateOfBirth) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.email = email;
         this.address = address;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getId() {

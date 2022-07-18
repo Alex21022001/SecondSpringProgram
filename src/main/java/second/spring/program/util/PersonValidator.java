@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import second.spring.program.dao.PersonDAO;
 import second.spring.program.models.Person;
 import second.spring.program.services.PeopleService;
 

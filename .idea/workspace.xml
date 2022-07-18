@@ -9,18 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2633cc61-3fef-4908-a74a-685d5484e6e8" name="Changes" comment="add Hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/repositories/ItemsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/repositories/PeopleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/ItemsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" afterDir="false" />
+    <list default="true" id="2633cc61-3fef-4908-a74a-685d5484e6e8" name="Changes" comment="add Spring JPA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/config/MySpringMVCIntitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/config/MySpringMVCIntitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/BatchController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/dao/PersonDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/batch/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/batch/styleforwith.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="addHibernate" />
+        <entry key="$PROJECT_DIR$" value="addSpringJPA" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -227,7 +227,7 @@
       <workItem from="1657179214403" duration="4769000" />
       <workItem from="1657804100759" duration="661000" />
       <workItem from="1658067478046" duration="10124000" />
-      <workItem from="1658145922653" duration="309000" />
+      <workItem from="1658145922653" duration="2406000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 24">
       <created>1656941684648</created>
@@ -264,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658069836395</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add Spring JPA">
+      <created>1658146486472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658146486472</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +282,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="15" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="15" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="15" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -286,17 +301,7 @@
     <MESSAGE value="lesson 24" />
     <MESSAGE value="Add DB" />
     <MESSAGE value="add Hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Hibernate" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/second/spring/program/services/PeopleService.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add Spring JPA" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Spring JPA" />
   </component>
 </project>

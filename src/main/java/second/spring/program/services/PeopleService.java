@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import second.spring.program.models.Person;
 import second.spring.program.repositories.PeopleRepository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,6 +31,7 @@ public class PeopleService {
 
     @Transactional
     public void save(Person person) {
+        person.setCreatedAT(new Date());
         peopleRepository.save(person);
     }
 
@@ -48,19 +50,16 @@ public class PeopleService {
         return peopleRepository.findByEmail(email).stream().findAny();
     }
 
-    public List<Person> findByName(String name){
-       return peopleRepository.findByName(name);
+    public List<Person> findByName(String name) {
+        return peopleRepository.findByName(name);
     }
 
-    public List<Person> findByNameStartingWith(String startingName){
+    public List<Person> findByNameStartingWith(String startingName) {
         return peopleRepository.findByNameStartingWith(startingName);
     }
 
-    public List<Person> findByNameOrEmail(String name,String email){
-        return peopleRepository.findByNameOrEmail(name,email);
+    public List<Person> findByNameOrEmail(String name, String email) {
+        return peopleRepository.findByNameOrEmail(name, email);
     }
 
-    public void test(){
-        System.out.println("testing");
-    }
 }
