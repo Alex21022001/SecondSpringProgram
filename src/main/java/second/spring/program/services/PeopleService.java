@@ -3,6 +3,7 @@ package second.spring.program.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import second.spring.program.models.Mood;
 import second.spring.program.models.Person;
 import second.spring.program.repositories.PeopleRepository;
 
@@ -32,6 +33,7 @@ public class PeopleService {
     @Transactional
     public void save(Person person) {
         person.setCreatedAT(new Date());
+        person.setMood(Mood.CALM);
         peopleRepository.save(person);
     }
 

@@ -40,6 +40,18 @@ public class Person {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date dateOfBirth;
 
+
+    @Enumerated(EnumType.STRING)
+    private Mood mood;
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
+
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
