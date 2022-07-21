@@ -28,6 +28,7 @@ public class PersonValidator implements Validator {
 
         if (peopleService.findByEmail(person.getEmail()).isPresent())
             errors.rejectValue("email","","This email is already taken");
+        if (person.getDateOfBirth()==null)errors.rejectValue("dateOfBirth","","This field should not be empty");
 
     }
 }
