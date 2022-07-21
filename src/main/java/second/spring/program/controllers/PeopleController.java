@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import second.spring.program.dao.PersonDao;
 import second.spring.program.models.Person;
 import second.spring.program.services.ItemsService;
 import second.spring.program.services.PeopleService;
@@ -19,13 +20,15 @@ public class PeopleController {
     private final PeopleService peopleService;
     private final ItemsService itemsService;
     private final PersonValidator personValidator;
+    private final PersonDao personDao;
 
 
     @Autowired
-    public PeopleController(PeopleService peopleService, ItemsService itemsService, PersonValidator personValidator) {
+    public PeopleController(PeopleService peopleService, ItemsService itemsService, PersonValidator personValidator, PersonDao personDao) {
         this.peopleService = peopleService;
         this.itemsService = itemsService;
         this.personValidator = personValidator;
+        this.personDao = personDao;
     }
 
     @GetMapping()
