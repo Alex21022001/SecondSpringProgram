@@ -11,10 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2633cc61-3fef-4908-a74a-685d5484e6e8" name="Changes" comment="2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/second/spring/program/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/second/spring/program/dao/PersonDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
