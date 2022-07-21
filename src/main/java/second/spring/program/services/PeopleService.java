@@ -1,6 +1,8 @@
 package second.spring.program.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import second.spring.program.models.Person;
@@ -21,6 +23,7 @@ public class PeopleService {
     }
 
     public List<Person> findAll() {
+//        return peopleRepository.findAll(PageRequest.of(1,4,Sort.by("name"))).getContent();
         return peopleRepository.findAll();
     }
 
